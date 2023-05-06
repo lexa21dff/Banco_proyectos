@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    rol:'',
     username:'',
     user: {
       token: '',
@@ -32,6 +33,9 @@ export default new Vuex.Store({
     setUsername(state, username) {
       state.username = username
     },
+    setRol(state, rol) {
+      state.rol = rol
+    },
     removeToken(state) {
       state.user.token = '',
       state.user.isAuthenticated = false
@@ -42,6 +46,7 @@ export default new Vuex.Store({
         isAuthenticated: false,
       },
       state.username = ''
+      state.rol = ''
     }
   },
   actions: {

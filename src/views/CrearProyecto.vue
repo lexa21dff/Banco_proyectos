@@ -144,7 +144,13 @@
       async postProyecto(){
         console.log(this.proyecto)
         await this.axios.post('http://127.0.0.1:8000/api/proyecto/', this.proyecto)
-        this.$router.push('/ListaProyecto')
+        .then(response => {
+          const username = response.data.nombre_proyecto
+          console.log(username)
+        })
+                    
+
+        // this.$router.push('/ListaProyecto')
       }
     },
     async mounted(){
