@@ -15,7 +15,7 @@
           <!-- Enlaces de router a la derecha -->
           <b-nav-item to="/proyectos">Proyectos</b-nav-item>
           
-          <b-nav-item-dropdown text="Grupo" right>
+          <b-nav-item-dropdown text="Fichas" right>
             <b-dropdown-item to="/crear-proyecto">Crear grupo</b-dropdown-item>
             <b-dropdown-item to="/crear-proyecto">Ver Grupo</b-dropdown-item>
           </b-nav-item-dropdown>
