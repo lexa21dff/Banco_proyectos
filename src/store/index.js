@@ -6,8 +6,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+<<<<<<< HEAD
     rol:'',
     username:'',
+=======
+    perfil:'',
+>>>>>>> f8a6ce69f4a303b5f23d32c6ffd88958fd6cecf7
     user: {
       token: '',
       isAuthenticated: false,
@@ -30,8 +34,8 @@ export default new Vuex.Store({
       state.user.token = token,
       state.user.isAuthenticated = true
     },
-    setUsername(state, username) {
-      state.username = username
+    setUsername(state, perfil) {
+      state.perfil = perfil
     },
     setRol(state, rol) {
       state.rol = rol
@@ -45,8 +49,12 @@ export default new Vuex.Store({
         token: '',
         isAuthenticated: false,
       },
+<<<<<<< HEAD
       state.username = ''
       state.rol = ''
+=======
+      state.perfil = ''
+>>>>>>> f8a6ce69f4a303b5f23d32c6ffd88958fd6cecf7
     }
   },
   actions: {
@@ -54,6 +62,6 @@ export default new Vuex.Store({
   modules: {
   },
   plugins: [createPersistedState({
-    paths: ['user', 'username']
+    paths: ['user', 'perfil']
   })]
 })

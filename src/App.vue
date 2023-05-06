@@ -1,5 +1,6 @@
 <template>
   <div >
+<<<<<<< HEAD
     <template v-if="$store.state.user.isAuthenticated">
       <template v-if="rol ='Aprendiz' ">
 
@@ -11,6 +12,16 @@
     </template>
     <template v-else>
       <Nabvar></Nabvar>
+=======
+    <template  v-if="$store.state.user.isAuthenticated">
+      <NabvarAprendiz></NabvarAprendiz>
+
+    </template>
+    <template v-else>
+      <nav>
+        <Nabvar></Nabvar>
+      </nav>
+>>>>>>> f8a6ce69f4a303b5f23d32c6ffd88958fd6cecf7
     </template>
     <router-view/>
   </div>
@@ -18,8 +29,12 @@
 <script>
 import axios from 'axios'
 import Nabvar from '@/components/Nabvar.vue';
+<<<<<<< HEAD
 import NabvarAprendiz from '@/components/NabvarAprendiz.vue';
 import NabvarInstructor from '@/components/NabvarInstructor.vue';
+=======
+import NabvarAprendiz from '@/components/NabvarAprendiz.vue'
+>>>>>>> f8a6ce69f4a303b5f23d32c6ffd88958fd6cecf7
 export default {
   data() {
           return {
@@ -29,8 +44,12 @@ export default {
       },
   components:{
     Nabvar,
+<<<<<<< HEAD
     NabvarAprendiz,
     NabvarInstructor
+=======
+    NabvarAprendiz
+>>>>>>> f8a6ce69f4a303b5f23d32c6ffd88958fd6cecf7
   },
   methods:{
 
