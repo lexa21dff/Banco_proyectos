@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    username:'',
+    perfil:'',
     user: {
       token: '',
       isAuthenticated: false,
@@ -29,8 +29,8 @@ export default new Vuex.Store({
       state.user.token = token,
       state.user.isAuthenticated = true
     },
-    setUsername(state, username) {
-      state.username = username
+    setUsername(state, perfil) {
+      state.perfil = perfil
     },
     removeToken(state) {
       state.user.token = '',
@@ -41,7 +41,7 @@ export default new Vuex.Store({
         token: '',
         isAuthenticated: false,
       },
-      state.username = ''
+      state.perfil = ''
     }
   },
   actions: {
@@ -49,6 +49,6 @@ export default new Vuex.Store({
   modules: {
   },
   plugins: [createPersistedState({
-    paths: ['user', 'username']
+    paths: ['user', 'perfil']
   })]
 })

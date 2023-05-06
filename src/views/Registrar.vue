@@ -63,7 +63,7 @@
                 }
 
                 axios
-                    .post('http://127.0.0.1:8000/api/user/', formData)
+                    .post('http://127.0.0.1:8000/api/signup/', formData)
                     .then(response => {
                       console.log(response)
                         this.$router.push('/login')

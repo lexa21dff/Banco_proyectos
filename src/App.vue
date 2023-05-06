@@ -1,17 +1,25 @@
 <template>
   <div >
-    <nav>
-      <Nabvar></Nabvar>
-    </nav>
+    <template  v-if="$store.state.user.isAuthenticated">
+      <NabvarAprendiz></NabvarAprendiz>
+
+    </template>
+    <template v-else>
+      <nav>
+        <Nabvar></Nabvar>
+      </nav>
+    </template>
     <router-view/>
   </div>
 </template>
 <script>
 import axios from 'axios'
 import Nabvar from '@/components/Nabvar.vue';
+import NabvarAprendiz from '@/components/NabvarAprendiz.vue'
 export default {
   components:{
-    Nabvar
+    Nabvar,
+    NabvarAprendiz
   },
   methods:{
 
